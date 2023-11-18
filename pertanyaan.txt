@@ -1,0 +1,21 @@
+1. Sebagai Backend Infrastruktur, bagaimana cara Anda melihat domain yang terkoneksi
+dengan service pada AWS?
+
+Jawab:
+untuk melihat domain yang terkoneksi dengan AWS kita dapat mengunakan layanan Aws seperti route 53 dan load balancer
+
+2. Sebagai Backend Infrastruktur, bagaimana strategi Anda dalam mengelola server yang
+akan digunakan untuk 2 juta user dalam beberapa request?
+
+Jawab:
+
+Yaitu dengan mengimplementasikan sistem pengawasan untuk memantau server seperti Prometheus dan kita juga dapat melakukan optimalisasi kode yang dapat meningkatkan kinerja server 
+sperti penggunaan teknik kompresi data.
+
+3. Bagaimana cara kerja Node.js dibalik layar?
+
+Jawab : 
+- client megirim request ke webserver untuk berinteraksi dengan aplikasi 
+- node.js akan mengambil request yang masuk, lalu memaskukannya ke even queue
+- kemudian diteruskan melalui event loop
+- event loop lalu memproses permintaan tersebut lalu mengembalikan respons ke client
